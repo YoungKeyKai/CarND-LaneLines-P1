@@ -4,10 +4,6 @@ The goals / steps of this project are the following:
 * Make a pipeline that finds lane lines on the road
 * Reflect on your work in a written report
 
-[//]: # (Image References)
-
-[image1]: ./examples/grayscale.jpg "Grayscale"
-
 ---
 
 ### Reflection
@@ -44,11 +40,11 @@ When the above issues are combined, we can foresee when a white or yellow car is
 
 3. The left-right line separation algorithm doesn't always categorize them correctly. Noticeably, some lines from either lane can have the "wrong" slope because of the perspective. This is especially true for the short horizontal lines on the ends of each marking.
 
-#### 2.1 Example of the colour masking issue
+#### 2.1 Example Change Due to Colour Masking Parameters
 
 ![image1](./writeup_imgs/low_yellow_sat_limit.png)
 
-For example, with a lower yellow saturation, there are noticeably more trees and grass from the right side compared to a higher yellow saturation as shown below.
+The above image uses a lower yellow saturation. Compared to the image below which uses a higher yellow saturation, there are noticeably more trees and grass on the right side.
 
 ![image1](./writeup_imgs/higher_yellow_sat_limit.png)
 
