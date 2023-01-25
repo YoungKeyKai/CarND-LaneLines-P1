@@ -11,7 +11,7 @@ The goals / steps of this project are the following:
 ### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
 
 The pipeline basically follows the given steps from the introduction tutorial.
-1. Takes the raw image and transform it to HSV using OpenCV to prepare for colour thresholding.
+1. Takes the raw image and transform it to HSV using OpenCV to prepare for colour thresholding. An interesting problem encountered here was that OpenCV had both RGB and BGR. Using BGR would cause the hue values to change, but once the values are adjusted for this, the algorithm would produce the same results as when using RGB.
 2. Colour threshold based on hue and saturation found using histograms plus some manual correction to narrow the ranges through trial and error.
 3. Convert the resulting image to greyscale and smooth it to prepare for canny edge detection.
 4. Perform Canny edge detection with parameters that are found based on trial and error.
